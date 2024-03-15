@@ -1,0 +1,878 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://fonts/font1.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/StorageResource.tscn" type="PackedScene" id=3]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00005.png" type="Texture" id=4]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00020.png" type="Texture" id=5]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00021.png" type="Texture" id=6]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00023.png" type="Texture" id=7]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00013.png" type="Texture" id=8]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00006.png" type="Texture" id=9]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00008.png" type="Texture" id=10]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00011.png" type="Texture" id=11]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00012.png" type="Texture" id=12]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00014.png" type="Texture" id=13]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00016.png" type="Texture" id=14]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00018.png" type="Texture" id=15]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00022.png" type="Texture" id=16]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00017.png" type="Texture" id=17]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00024.png" type="Texture" id=18]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00015.png" type="Texture" id=19]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00007.png" type="Texture" id=20]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00010.png" type="Texture" id=21]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00009.png" type="Texture" id=22]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00019.png" type="Texture" id=23]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00026.png" type="Texture" id=24]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00028.png" type="Texture" id=25]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00029.png" type="Texture" id=26]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00025.png" type="Texture" id=27]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00027.png" type="Texture" id=28]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00030.png" type="Texture" id=29]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00039.png" type="Texture" id=30]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00035.png" type="Texture" id=31]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00032.png" type="Texture" id=32]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00033.png" type="Texture" id=33]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00034.png" type="Texture" id=34]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00037.png" type="Texture" id=35]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00036.png" type="Texture" id=36]
+[ext_resource path="res://graphics/Expansion/paneling_exp_00038.png" type="Texture" id=37]
+[ext_resource path="res://scenes/BoltsAndAnkhs.tscn" type="PackedScene" id=38]
+[ext_resource path="res://graphics/Pharaoh_General/Sprites_00024.png" type="Texture" id=39]
+
+[node name="Main" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0980392, 0.101961, 0.129412, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 40.0
+margin_right = 354.0
+margin_bottom = 145.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Culture:
+Prosperity:
+Monument:
+Kingdom:"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 92.0
+margin_top = 16.0
+margin_right = 474.0
+margin_bottom = 85.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Required: Current:              Personal savings:"
+
+[node name="Required" type="Label" parent="Panel"]
+margin_left = 122.0
+margin_top = 40.0
+margin_right = 289.0
+margin_bottom = 145.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "100
+100
+100
+100
+
+12 Common Residences"
+
+[node name="Current" type="Label" parent="Panel"]
+margin_left = 177.0
+margin_top = 40.0
+margin_right = 312.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 2 )
+text = "100
+100
+100
+100"
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 460.0
+margin_right = 354.0
+margin_bottom = 565.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Burial provisions:"
+
+[node name="Label4" type="Label" parent="Panel"]
+margin_left = 92.0
+margin_top = 164.0
+margin_right = 475.0
+margin_bottom = 233.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Employment:                         Game Speed:"
+
+[node name="Label5" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 187.0
+margin_right = 354.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Workers:
+Lacking:
+Unemployed:"
+
+[node name="Employees" type="Label" parent="Panel"]
+margin_left = 128.0
+margin_top = 187.0
+margin_right = 458.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "1632
+32
+4772"
+
+[node name="Speed" type="Label" parent="Panel"]
+margin_left = 391.0
+margin_top = 187.0
+margin_right = 475.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "60"
+align = 2
+
+[node name="Label6" type="Label" parent="Panel"]
+margin_left = 92.0
+margin_top = 259.0
+margin_right = 484.0
+margin_bottom = 328.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "              Shrines / Temples /
+ Mood:        Temple Complexes:     Festival:"
+
+[node name="Label7" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 298.0
+margin_right = 354.0
+margin_bottom = 403.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Osiris
+Ra
+Ptah
+Seth
+Bast"
+
+[node name="Moods" type="Label" parent="Panel"]
+margin_left = 97.0
+margin_top = 298.0
+margin_right = 427.0
+margin_bottom = 403.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "50
+90
+100
+0
+2"
+
+[node name="BoltsAndAnkhs" parent="Panel/Moods" instance=ExtResource( 38 )]
+margin_left = 33.0
+margin_right = 128.0
+value = 100
+
+[node name="BoltsAndAnkhs2" parent="Panel/Moods" instance=ExtResource( 38 )]
+margin_left = 33.0
+margin_top = 18.0
+margin_right = 128.0
+margin_bottom = 34.0
+value = 100
+
+[node name="BoltsAndAnkhs3" parent="Panel/Moods" instance=ExtResource( 38 )]
+margin_left = 33.0
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 52.0
+value = 100
+
+[node name="BoltsAndAnkhs4" parent="Panel/Moods" instance=ExtResource( 38 )]
+margin_left = 33.0
+margin_top = 54.0
+margin_right = 128.0
+margin_bottom = 70.0
+value = 100
+
+[node name="BoltsAndAnkhs5" parent="Panel/Moods" instance=ExtResource( 38 )]
+margin_left = 33.0
+margin_top = 72.0
+margin_right = 128.0
+margin_bottom = 88.0
+value = 100
+
+[node name="Patron" type="Sprite" parent="Panel/Moods"]
+position = Vector2( -84, 4 )
+texture = ExtResource( 39 )
+
+[node name="Moods2" type="Label" parent="Panel"]
+visible = false
+margin_left = 115.0
+margin_top = 289.0
+margin_right = 445.0
+margin_bottom = 394.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Furious
+Displeased
+Congenial
+Amiable
+Angry"
+
+[node name="Shrines" type="Label" parent="Panel"]
+margin_left = 206.0
+margin_top = 302.0
+margin_right = 536.0
+margin_bottom = 407.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "1
+1
+5
+2"
+
+[node name="Temples" type="Label" parent="Panel"]
+margin_left = 252.0
+margin_top = 298.0
+margin_right = 582.0
+margin_bottom = 403.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "1
+1
+5
+2"
+
+[node name="TemplesComplex" type="Label" parent="Panel"]
+margin_left = 298.0
+margin_top = 298.0
+margin_right = 628.0
+margin_bottom = 403.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "1
+1
+5
+2"
+
+[node name="Festival" type="Label" parent="Panel"]
+margin_left = 383.0
+margin_top = 298.0
+margin_right = 713.0
+margin_bottom = 403.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "1
+1
+5
+2"
+
+[node name="Storage" type="VBoxContainer" parent="Panel"]
+margin_left = 550.0
+margin_top = 15.0
+margin_right = 744.0
+margin_bottom = 603.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StorageResource" parent="Panel/Storage" instance=ExtResource( 3 )]
+visible = false
+margin_right = 194.0
+margin_bottom = 16.0
+texture = ExtResource( 4 )
+text = "Grain"
+
+[node name="StorageResource36" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_right = 194.0
+margin_bottom = 16.0
+texture = ExtResource( 4 )
+text = "Grain"
+
+[node name="StorageResource2" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 17.0
+margin_right = 194.0
+margin_bottom = 33.0
+texture = ExtResource( 9 )
+text = "Meat"
+
+[node name="StorageResource3" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 34.0
+margin_right = 194.0
+margin_bottom = 50.0
+texture = ExtResource( 20 )
+text = "Lettuce"
+
+[node name="StorageResource4" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 51.0
+margin_right = 194.0
+margin_bottom = 67.0
+texture = ExtResource( 10 )
+text = "Chickpeas"
+
+[node name="StorageResource5" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 68.0
+margin_right = 194.0
+margin_bottom = 84.0
+texture = ExtResource( 22 )
+text = "Pomegranates"
+
+[node name="StorageResource6" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 85.0
+margin_right = 194.0
+margin_bottom = 101.0
+texture = ExtResource( 21 )
+text = "Figs"
+
+[node name="StorageResource7" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 102.0
+margin_right = 194.0
+margin_bottom = 118.0
+texture = ExtResource( 11 )
+text = "Fish"
+
+[node name="StorageResource8" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 119.0
+margin_right = 194.0
+margin_bottom = 135.0
+texture = ExtResource( 12 )
+text = "Game meat"
+
+[node name="StorageResource9" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 136.0
+margin_right = 194.0
+margin_bottom = 152.0
+texture = ExtResource( 8 )
+text = "Straw"
+
+[node name="StorageResource10" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 153.0
+margin_right = 194.0
+margin_bottom = 169.0
+texture = ExtResource( 13 )
+text = "Weapons"
+
+[node name="StorageResource11" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 170.0
+margin_right = 194.0
+margin_bottom = 186.0
+texture = ExtResource( 19 )
+text = "Clay"
+
+[node name="StorageResource12" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 187.0
+margin_right = 194.0
+margin_bottom = 203.0
+texture = ExtResource( 14 )
+text = "Bricks"
+
+[node name="StorageResource13" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 204.0
+margin_right = 194.0
+margin_bottom = 220.0
+texture = ExtResource( 17 )
+text = "Pottery"
+
+[node name="StorageResource14" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 221.0
+margin_right = 194.0
+margin_bottom = 237.0
+texture = ExtResource( 15 )
+text = "Barley"
+
+[node name="StorageResource15" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 238.0
+margin_right = 194.0
+margin_bottom = 254.0
+texture = ExtResource( 23 )
+text = "Beer"
+
+[node name="StorageResource16" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 255.0
+margin_right = 194.0
+margin_bottom = 271.0
+texture = ExtResource( 5 )
+text = "Flax"
+
+[node name="StorageResource17" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 272.0
+margin_right = 194.0
+margin_bottom = 288.0
+texture = ExtResource( 6 )
+text = "Linen"
+
+[node name="StorageResource18" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 289.0
+margin_right = 194.0
+margin_bottom = 305.0
+texture = ExtResource( 16 )
+text = "Gems"
+
+[node name="StorageResource19" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 306.0
+margin_right = 194.0
+margin_bottom = 322.0
+texture = ExtResource( 7 )
+text = "Luxury goods"
+
+[node name="StorageResource20" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 323.0
+margin_right = 194.0
+margin_bottom = 339.0
+texture = ExtResource( 18 )
+text = "Wood"
+
+[node name="StorageResource21" parent="Panel/Storage" instance=ExtResource( 3 )]
+visible = false
+margin_top = 361.0
+margin_right = 194.0
+margin_bottom = 370.0
+texture = ExtResource( 27 )
+text = "Meat"
+
+[node name="StorageResource22" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 340.0
+margin_right = 194.0
+margin_bottom = 356.0
+texture = ExtResource( 24 )
+text = "Reeds"
+
+[node name="StorageResource23" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 357.0
+margin_right = 194.0
+margin_bottom = 373.0
+texture = ExtResource( 28 )
+text = "Papyrus"
+
+[node name="StorageResource24" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 374.0
+margin_right = 194.0
+margin_bottom = 390.0
+texture = ExtResource( 25 )
+text = "Plain stone"
+
+[node name="StorageResource25" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 391.0
+margin_right = 194.0
+margin_bottom = 407.0
+texture = ExtResource( 26 )
+text = "Limestone"
+
+[node name="StorageResource26" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 408.0
+margin_right = 194.0
+margin_bottom = 424.0
+texture = ExtResource( 29 )
+text = "Granite"
+
+[node name="StorageResource27" parent="Panel/Storage" instance=ExtResource( 3 )]
+visible = false
+margin_top = 450.0
+margin_right = 194.0
+margin_bottom = 464.0
+texture = ExtResource( 29 )
+text = "Meat"
+
+[node name="StorageResource28" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 425.0
+margin_right = 194.0
+margin_bottom = 441.0
+texture = ExtResource( 32 )
+text = "Chariots"
+
+[node name="StorageResource29" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 442.0
+margin_right = 194.0
+margin_bottom = 458.0
+texture = ExtResource( 33 )
+text = "Copper"
+
+[node name="StorageResource30" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 459.0
+margin_right = 194.0
+margin_bottom = 475.0
+texture = ExtResource( 34 )
+text = "Sandstone"
+
+[node name="StorageResource31" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 476.0
+margin_right = 194.0
+margin_bottom = 492.0
+texture = ExtResource( 31 )
+text = "Oil"
+
+[node name="StorageResource32" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 493.0
+margin_right = 194.0
+margin_bottom = 509.0
+texture = ExtResource( 36 )
+text = "Henna"
+
+[node name="StorageResource33" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 510.0
+margin_right = 194.0
+margin_bottom = 527.0
+texture = ExtResource( 35 )
+text = "Paint"
+
+[node name="StorageResource34" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 528.0
+margin_right = 194.0
+margin_bottom = 544.0
+texture = ExtResource( 37 )
+text = "Lamps"
+
+[node name="StorageResource35" parent="Panel/Storage" instance=ExtResource( 3 )]
+margin_top = 545.0
+margin_right = 194.0
+margin_bottom = 561.0
+texture = ExtResource( 30 )
+text = "Marble"
+
+[node name="Provisions" type="GridContainer" parent="Panel"]
+margin_left = 25.0
+margin_top = 483.0
+margin_right = 481.0
+margin_bottom = 568.0
+custom_constants/vseparation = 1
+custom_constants/hseparation = 55
+columns = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StorageResource" parent="Panel/Provisions" instance=ExtResource( 3 )]
+visible = false
+margin_right = 194.0
+margin_bottom = 16.0
+texture = ExtResource( 4 )
+text = "Grain"
+short = true
+
+[node name="StorageResource36" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_bottom = 16.0
+texture = ExtResource( 4 )
+text = "Grain"
+short = true
+
+[node name="StorageResource2" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_right = 96.0
+margin_bottom = 16.0
+texture = ExtResource( 9 )
+text = "Meat"
+short = true
+
+[node name="StorageResource3" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_right = 168.0
+margin_bottom = 16.0
+texture = ExtResource( 20 )
+text = "Lettuce"
+short = true
+
+[node name="StorageResource4" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 223.0
+margin_right = 240.0
+margin_bottom = 16.0
+texture = ExtResource( 10 )
+text = "Chickpeas"
+short = true
+
+[node name="StorageResource5" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 295.0
+margin_right = 312.0
+margin_bottom = 16.0
+texture = ExtResource( 22 )
+text = "Pomegranates"
+short = true
+
+[node name="StorageResource6" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 367.0
+margin_right = 384.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+text = "Figs"
+short = true
+
+[node name="StorageResource7" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 439.0
+margin_right = 456.0
+margin_bottom = 16.0
+texture = ExtResource( 11 )
+text = "Fish"
+short = true
+
+[node name="StorageResource8" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_top = 17.0
+margin_bottom = 33.0
+texture = ExtResource( 12 )
+text = "Game meat"
+short = true
+
+[node name="StorageResource9" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_top = 17.0
+margin_right = 96.0
+margin_bottom = 33.0
+texture = ExtResource( 8 )
+text = "Straw"
+short = true
+
+[node name="StorageResource10" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_top = 17.0
+margin_right = 168.0
+margin_bottom = 33.0
+texture = ExtResource( 13 )
+text = "Weapons"
+short = true
+
+[node name="StorageResource11" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 223.0
+margin_top = 17.0
+margin_right = 240.0
+margin_bottom = 33.0
+texture = ExtResource( 19 )
+text = "Clay"
+short = true
+
+[node name="StorageResource12" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 295.0
+margin_top = 17.0
+margin_right = 312.0
+margin_bottom = 33.0
+texture = ExtResource( 14 )
+text = "Bricks"
+short = true
+
+[node name="StorageResource13" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 367.0
+margin_top = 17.0
+margin_right = 384.0
+margin_bottom = 33.0
+texture = ExtResource( 17 )
+text = "Pottery"
+short = true
+
+[node name="StorageResource14" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 439.0
+margin_top = 17.0
+margin_right = 456.0
+margin_bottom = 33.0
+texture = ExtResource( 15 )
+text = "Barley"
+short = true
+
+[node name="StorageResource15" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_top = 34.0
+margin_bottom = 50.0
+texture = ExtResource( 23 )
+text = "Beer"
+short = true
+
+[node name="StorageResource16" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_top = 34.0
+margin_right = 96.0
+margin_bottom = 50.0
+texture = ExtResource( 5 )
+text = "Flax"
+short = true
+
+[node name="StorageResource17" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_top = 34.0
+margin_right = 168.0
+margin_bottom = 50.0
+texture = ExtResource( 6 )
+text = "Linen"
+short = true
+
+[node name="StorageResource18" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 223.0
+margin_top = 34.0
+margin_right = 240.0
+margin_bottom = 50.0
+texture = ExtResource( 16 )
+text = "Gems"
+short = true
+
+[node name="StorageResource19" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 295.0
+margin_top = 34.0
+margin_right = 312.0
+margin_bottom = 50.0
+texture = ExtResource( 7 )
+text = "Luxury goods"
+short = true
+
+[node name="StorageResource20" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 367.0
+margin_top = 34.0
+margin_right = 384.0
+margin_bottom = 50.0
+texture = ExtResource( 18 )
+text = "Wood"
+short = true
+
+[node name="StorageResource21" parent="Panel/Provisions" instance=ExtResource( 3 )]
+visible = false
+margin_top = 361.0
+margin_right = 194.0
+margin_bottom = 370.0
+texture = ExtResource( 27 )
+text = "Meat"
+short = true
+
+[node name="StorageResource22" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 439.0
+margin_top = 34.0
+margin_right = 456.0
+margin_bottom = 50.0
+texture = ExtResource( 24 )
+text = "Reeds"
+short = true
+
+[node name="StorageResource23" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_top = 51.0
+margin_bottom = 67.0
+texture = ExtResource( 28 )
+text = "Papyrus"
+short = true
+
+[node name="StorageResource24" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_top = 51.0
+margin_right = 96.0
+margin_bottom = 67.0
+texture = ExtResource( 25 )
+text = "Plain stone"
+short = true
+
+[node name="StorageResource25" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_top = 51.0
+margin_right = 168.0
+margin_bottom = 67.0
+texture = ExtResource( 26 )
+text = "Limestone"
+short = true
+
+[node name="StorageResource26" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 223.0
+margin_top = 51.0
+margin_right = 240.0
+margin_bottom = 67.0
+texture = ExtResource( 29 )
+text = "Granite"
+short = true
+
+[node name="StorageResource27" parent="Panel/Provisions" instance=ExtResource( 3 )]
+visible = false
+margin_top = 450.0
+margin_right = 194.0
+margin_bottom = 464.0
+texture = ExtResource( 29 )
+text = "Meat"
+short = true
+
+[node name="StorageResource28" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 295.0
+margin_top = 51.0
+margin_right = 312.0
+margin_bottom = 67.0
+texture = ExtResource( 32 )
+text = "Chariots"
+short = true
+
+[node name="StorageResource29" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 367.0
+margin_top = 51.0
+margin_right = 384.0
+margin_bottom = 67.0
+texture = ExtResource( 33 )
+text = "Copper"
+short = true
+
+[node name="StorageResource30" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 439.0
+margin_top = 51.0
+margin_right = 456.0
+margin_bottom = 67.0
+texture = ExtResource( 34 )
+text = "Sandstone"
+short = true
+
+[node name="StorageResource31" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_top = 68.0
+margin_bottom = 85.0
+texture = ExtResource( 31 )
+text = "Oil"
+short = true
+
+[node name="StorageResource32" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_top = 68.0
+margin_right = 96.0
+margin_bottom = 85.0
+texture = ExtResource( 36 )
+text = "Henna"
+short = true
+
+[node name="StorageResource33" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_top = 68.0
+margin_right = 168.0
+margin_bottom = 85.0
+texture = ExtResource( 35 )
+text = "Paint"
+short = true
+
+[node name="StorageResource34" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 223.0
+margin_top = 68.0
+margin_right = 240.0
+margin_bottom = 85.0
+texture = ExtResource( 37 )
+text = "Lamps"
+short = true
+
+[node name="StorageResource35" parent="Panel/Provisions" instance=ExtResource( 3 )]
+margin_left = 295.0
+margin_top = 68.0
+margin_right = 312.0
+margin_bottom = 85.0
+texture = ExtResource( 30 )
+text = "Marble"
+short = true
+
+[node name="Waiting" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+margin_top = 14.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 2 )
+text = "Waiting for process..."
+align = 1

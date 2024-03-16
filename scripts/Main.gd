@@ -66,6 +66,31 @@ func cleanup():
 	$Panel.hide()
 	$Waiting.show()
 
+var our_city_id = -1
+var city_produce_address = -1
+func update_city_id():
+	var trading_base = 0x37F748
+	if our_city_id != -1:
+		# check that the address points to OUR city!
+		var type = GDNScraper.scrape(trading_base + our_city_id * 0x62, 1)
+		var in_use = GDNScraper.scrape(trading_base + our_city_id * 0x62 + 0x1, 1)
+		var city_type = GDNScraper.scrape(trading_base + our_city_id * 0x62 + 0x18, 1)
+		if type != 1 || in_use != 2 || city_type != 0:
+			our_city_id = -1 # oh no!
+			city_produce_address = -1
+	if our_city_id == -1:
+		for c in range(0,61):
+			var type = GDNScraper.scrape(trading_base + c * 0x62, 1)
+			var in_use = GDNScraper.scrape(trading_base + c * 0x62 + 0x1, 1)
+			var city_type = GDNScraper.scrape(trading_base + c * 0x62 + 0x18, 1)
+			if type == 1 && in_use == 2 && city_type == 0:
+				our_city_id = c # found our city!
+				break
+	if our_city_id == -1:
+		return false
+	city_produce_address = trading_base + our_city_id * 0x62 + 0x1e
+	return true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var t = 0
 func waitfor(step, delta):
@@ -84,7 +109,7 @@ func _process(delta):
 			processID = GDNScraper.open("Pharaoh.exe")
 			if processID != -1:
 				print("Hooked: PID ",processID)
-	if processID == -1 || GDNScraper.getLastError() != 0:
+	if processID == -1:
 		return cleanup()
 		
 	# update timer step
@@ -132,26 +157,6 @@ func _process(delta):
 		workers_unemployed, unemployment_percentage
 	]
 	$Panel/Speed.text = str(GDNScraper.scrape(0xA38E6C, 1))
-
-	# resources
-	for r in range(0,36):
-		# city storage
-		var res_list_item = $Panel/Storage.get_child(r)
-		if GDNScraper.scrape(0xAA8BDD + 0x1*r, 1) == 1:
-			res_list_item.show()
-			res_list_item.set_count(units_to_loads(r, GDNScraper.scrape(0xAAAB38 + 0x4*r, 4)))
-		else:
-			res_list_item.hide()
-		
-		# burial provisions
-		var prov_list_item = $Panel/Provisions.get_child(r)
-		var required = GDNScraper.scrape(0x384DE8 + 0x4*r, 4)
-		var dispatched = GDNScraper.scrape(0x384E78 + 0x4*r, 4)
-		if required > 0 && dispatched < required:
-			prov_list_item.show()
-			prov_list_item.set_count(str("x",loads_to_units(r, required-dispatched)))
-		else:
-			prov_list_item.hide()
 		
 	# religion
 	$Panel/Moods.text = ""
@@ -193,4 +198,41 @@ func _process(delta):
 	else:
 		$Panel/Moods/Patron.hide()
 
+	# update city trading id
+	if !update_city_id():
+		$Panel/Produce.hide()
+	else:
+		$Panel/Produce.show()
+	$Panel/Label8/CityID.text = str(our_city_id," : ",city_produce_address)
+
+	# resources
+	for r in range(0,36):
+		# city storage
+		var res_list_item = $Panel/Storage.get_child(r)
+		if GDNScraper.scrape(0xAA8BDD + 0x1*r, 1) == 1:
+			res_list_item.show()
+			res_list_item.set_count(units_to_loads(r, GDNScraper.scrape(0xAAAB38 + 0x4*r, 4)))
+		else:
+			res_list_item.hide()
+		
+		# burial provisions
+		var prov_list_item = $Panel/Provisions.get_child(r)
+		var required = GDNScraper.scrape(0x384DE8 + 0x4*r, 4)
+		var dispatched = GDNScraper.scrape(0x384E78 + 0x4*r, 4)
+		if required > 0 && dispatched < required:
+			prov_list_item.show()
+			prov_list_item.set_count(str("x",loads_to_units(r, required-dispatched)))
+		else:
+			prov_list_item.hide()
 	
+		# city produce
+		$Panel/Produce.get_child(r).hide()
+		
+	# city produce
+	for r in range(0,14):
+		var res_id = GDNScraper.scrape(city_produce_address + r * 0x1, 1)
+		if res_id > 0 && res_id < 36:
+			var prod_list_item = $Panel/Produce.get_child(res_id)
+			prod_list_item.show()
+	if GDNScraper.scrape(0x384CE4, 1) == 1:
+		$Panel/Produce.get_child(21).show()

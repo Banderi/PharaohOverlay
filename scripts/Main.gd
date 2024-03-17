@@ -63,6 +63,7 @@ func _ready():
 	processID = GDNScraper.open("Pharaoh.exe")
 
 func cleanup():
+	processID = -1
 	$Panel.hide()
 	$Waiting.show()
 

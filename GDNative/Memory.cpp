@@ -23,7 +23,7 @@ int Memory::GetProcessId(char* processName) {
         return -1;
     }
     lastError = 0;
-    return pe32.th32ProcessID;	
+    return pe32.th32ProcessID;
 }
 int Memory::GetModuleBase(HANDLE processHandle, std::basic_string<char> sModuleName)
 { 

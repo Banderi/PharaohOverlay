@@ -1,6 +1,7 @@
-[gd_resource type="DynamicFont" load_steps=2 format=2]
+[gd_resource type="DynamicFont" load_steps=3 format=2]
 
 [ext_resource path="res://fonts/font1.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://addons/texture_fonts/Classes/TextureFont.gd" type="Script" id=2]
 
 [resource]
 size = 8
@@ -8,3 +9,4 @@ extra_spacing_top = 4
 extra_spacing_bottom = 3
 extra_spacing_space = 5
 font_data = ExtResource( 1 )
+script = ExtResource( 2 )

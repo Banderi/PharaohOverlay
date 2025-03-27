@@ -139,7 +139,7 @@ func _process(delta):
 		GDNScraper.scrape(0xAAA51C, 4),
 		GDNScraper.scrape(0xAAA520, 4)
 	]
-	if GDNScraper.scrape(0x384C40, 1) == 1:
+	if GDNScraper.scrape(0x384C40, 1) == 1 && GDNScraper.scrape(0x384C34, 4) > 0:
 		$Panel/Required.text += "\n%d %s" % [GDNScraper.scrape(0x384C34, 4), houselevel(GDNScraper.scrape(0x384C38, 4))]
 	if GDNScraper.scrape(0x384C58, 4) == 1:
 		$Panel/Required.text += "\n%d %s" % [GDNScraper.scrape(0x384C5C, 4), " population"]

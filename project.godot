@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "BitmapFont",
+"class": "TextureFont",
+"language": "GDScript",
+"path": "res://addons/texture_fonts/Classes/TextureFont.gd"
+} ]
+_global_script_class_icons={
+"TextureFont": "res://addons/texture_fonts/Assets/TextureFont.svg"
+}
+
 [application]
 
 config/name="PharaohOverlay"
@@ -19,6 +29,10 @@ config/icon="res://icon.png"
 window/size/width=760
 window/size/height=590
 window/size/resizable=false
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/texture_fonts/plugin.cfg" )
 
 [gui]
 

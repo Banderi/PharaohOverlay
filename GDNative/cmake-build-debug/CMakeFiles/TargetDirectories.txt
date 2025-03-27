@@ -1,3 +1,0 @@
-E:/Godot/Projects/PharaohOverlay/GDNative/cmake-build-debug/CMakeFiles/GDN.dir
-E:/Godot/Projects/PharaohOverlay/GDNative/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/Godot/Projects/PharaohOverlay/GDNative/cmake-build-debug/CMakeFiles/rebuild_cache.dir
